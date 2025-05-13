@@ -1,0 +1,38 @@
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+
+  max-width: 944px;
+  margin: 0 auto;
+  padding: 50px 0;
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    transition: transform 300ms ease;
+    width: 200px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 48px;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &__hover {
+      font-weight: normal;
+      transition: color 300ms ease;
+
+      &:hover {
+        color: #34568b;
+      }
+    }
+
+    &:not(:nth-child(4n)) {
+      margin-right: 48px;
+    }
+  }
+}
